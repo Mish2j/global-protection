@@ -11,7 +11,7 @@ class Components extends Model
 
     public static function getData()
     {
-        $path = storage_path() . "/json/components.json"; // ie: /var/www/laravel/app/storage/json/filename.json
+        $path = storage_path() . "/json/components.json";
         $json = json_decode(file_get_contents($path, true)); 
         return $json;
     }

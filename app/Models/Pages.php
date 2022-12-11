@@ -11,7 +11,7 @@ class Pages extends Model
 
     public static function getJson($path)
     {
-        $path = storage_path() . $path; //
+        $path = storage_path() . $path;
         $json = json_decode(file_get_contents($path, true)); 
         return $json;
     }
@@ -34,7 +34,11 @@ class Pages extends Model
         return $catalogPage;
     }
 
-    public static function get404PageData() {}
+    public static function get404PageData() {
+        $pagePath = "/json/error404.json";
+        $catalogPage = Pages::getJson($pagePath);
+        return $catalogPage;
+    }
 }
 
 

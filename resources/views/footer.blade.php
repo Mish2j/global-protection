@@ -1,7 +1,6 @@
 @php
     use App\Models\Components;
 @endphp
-{{-- {{dd(Components::getFooterMenu())}} --}}
 <footer>
     <div class="container">
       
